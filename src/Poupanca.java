@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class Poupanca extends Conta {
     private int meses;
     private double jurosAoMes = 0.02;
@@ -25,10 +24,13 @@ public class Poupanca extends Conta {
         System.out.println("Olá, " + this.getNome());
         System.out.println("Seu saldo atual é: " + this.getSaldo());
 
-        System.out.println("Você deseja investir na Poupança? 1 para sim e 0 para não.");
+        System.out.println("Você deseja investir na Poupança? ");
+        System.out.println("1 - Sim");
+        System.out.println("2 - Não");
         int opcao = sc.nextInt();
 
         switch (opcao) {
+
             case 1:
                 System.out.println("Quanto você deseja investir?");
                 int investir = sc.nextInt();
@@ -53,7 +55,7 @@ public class Poupanca extends Conta {
                 }
                 break;
 
-            case 0:
+            case 2:
                 System.out.println("Você escolheu não investir na Poupança.");
                 break;
 

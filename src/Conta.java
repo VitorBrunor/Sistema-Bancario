@@ -31,10 +31,6 @@ public class Conta {
         this.saldo = saldo;
     }
 
-    public Conta(int saldo){
-
-    }
-
     public Conta(String nome, String numeroConta, int saldo){
         this.nome = nome;
         this.numeroConta = numeroConta;
@@ -44,5 +40,10 @@ public class Conta {
     public void investirPoupanca(){
         Poupanca p1 = new Poupanca("Vitor", "110200", 200);
         p1.poupar();
+    }
+
+    public void movimentarConta(){
+        Movimentacao m1 = new Movimentacao("Vitor", "110200", 200);
+        m1.movimentarConta();
     }
 }
