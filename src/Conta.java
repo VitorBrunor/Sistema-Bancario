@@ -37,9 +37,9 @@ public class Conta {
         this.saldo = saldo;
     }
 
-    public void investirPoupanca(){
-        Poupanca p1 = new Poupanca("Vitor", "110200", 200);
-        p1.poupar();
+    public void investimento(){
+        Investimento p1 = new Investimento("Vitor", "110200", 200);
+        p1.investir();
     }
 
     public void movimentarConta(){
