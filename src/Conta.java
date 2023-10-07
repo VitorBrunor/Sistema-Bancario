@@ -38,12 +38,12 @@ public class Conta {
     }
 
     public void investimento(){
-        Investimento p1 = new Investimento("Vitor", "110200", 200);
-        p1.investir();
+        Investimento investimento = new Investimento("Vitor", "110200", 200);
+        investimento.investir();
     }
 
     public void movimentarConta(){
-        Movimentacao m1 = new Movimentacao("Vitor", "110200", 200);
-        m1.movimentarConta();
+        Movimentacao movimentar = new Movimentacao("Vitor", "110200", 200);
+        movimentar.movimentarConta();
     }
 }
