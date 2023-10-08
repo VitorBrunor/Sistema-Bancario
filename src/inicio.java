@@ -14,13 +14,18 @@ public class inicio extends Conta {
 
         System.out.println("Olá " + novaConta.getNome());
         System.out.println("Sua conta tem as seguintes opções:");
-        System.out.println("1 - Movimentar a conta (saque/Depósito");
-        System.out.println("2 - Investir");
+        System.out.println("1 - Extrato");
+        System.out.println("2 - Movimentar a conta (saque/Depósito");
+        System.out.println("3 - Investir");
         System.out.println("Escolha uma opção: ");
         int escolhendo = sc.nextInt();
 
         switch (escolhendo) {
             case 1:
+                extrato();
+                break;
+
+            case 2:
                 novaConta.movimentarConta();
 
                 System.out.println("Deseja retornar ao menu inicio? ");
@@ -35,7 +40,7 @@ public class inicio extends Conta {
                 }
                 break;
 
-            case 2:
+            case 3:
                 novaConta.investimento();
 
                 System.out.println("Deseja retornar ao menu inicio? ");
@@ -51,4 +56,30 @@ public class inicio extends Conta {
                 break;
         }
     }
+
+    public void extrato(){
+        System.out.println("Nome: " + novaConta.getNome());
+        System.out.println("Número da conta: " + novaConta.getNumeroConta());
+        System.out.println("Saldo: " + novaConta.getSaldo());
+
+        System.out.println("Deseja retornar ao inicio?");
+        System.out.println("1 - Sim");
+        System.out.println("2 - Não");
+        int escolha = sc.nextInt();
+
+        switch (escolha){
+            case 1:
+                acoes();
+                break;
+
+            case 2:
+                System.out.println("Encerrando aplicação");
+                break;
+
+            default:
+                System.out.println("Opção inválida");
+                break;
+        }
+    }
+
 }

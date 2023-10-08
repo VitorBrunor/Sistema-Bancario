@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class Conta {
     private String nome = "Vitor";
     private String numeroConta;
@@ -31,6 +32,8 @@ public class Conta {
         this.saldo = saldo;
     }
 
+    Scanner sc = new Scanner(System.in);
+
     public Conta(String nome, String numeroConta, int saldo){
         this.nome = nome;
         this.numeroConta = numeroConta;
@@ -47,5 +50,5 @@ public class Conta {
         movimentar.movimentarConta();
     }
 
-    static Conta novaConta = new Conta("Vitor", "110202", 20);
+    static Conta novaConta = new Conta("Vitor", "110202", 0);
 }
