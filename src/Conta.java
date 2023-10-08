@@ -1,5 +1,5 @@
 public class Conta {
-    private String nome;
+    private String nome = "Vitor";
     private String numeroConta;
     private int saldo;
 
@@ -38,12 +38,14 @@ public class Conta {
     }
 
     public void investimento(){
-        Investimento investimento = new Investimento("Vitor", "110200", 200);
+        Investimento investimento = new Investimento();
         investimento.investir();
     }
 
     public void movimentarConta(){
-        Movimentacao movimentar = new Movimentacao("Vitor", "110200", 200);
+        Movimentacao movimentar = new Movimentacao();
         movimentar.movimentarConta();
     }
+
+    static Conta novaConta = new Conta("Vitor", "110202", 20);
 }

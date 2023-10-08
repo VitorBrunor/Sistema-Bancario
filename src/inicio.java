@@ -8,11 +8,11 @@ public class inicio extends Conta {
         acoes();
     }
 
+
     public void acoes() {
         Scanner sc = new Scanner(System.in);
-        Conta c1 = new Conta();
 
-        System.out.println("Olá " + this.getNome());
+        System.out.println("Olá " + novaConta.getNome());
         System.out.println("Sua conta tem as seguintes opções:");
         System.out.println("1 - Movimentar a conta (saque/Depósito");
         System.out.println("2 - Investir");
@@ -21,7 +21,7 @@ public class inicio extends Conta {
 
         switch (escolhendo) {
             case 1:
-                c1.movimentarConta();
+                novaConta.movimentarConta();
 
                 System.out.println("Deseja retornar ao menu inicio? ");
                 System.out.println("1 - Sim");
@@ -36,7 +36,7 @@ public class inicio extends Conta {
                 break;
 
             case 2:
-                c1.investimento();
+                novaConta.investimento();
 
                 System.out.println("Deseja retornar ao menu inicio? ");
                 System.out.println("1 - Sim");

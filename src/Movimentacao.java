@@ -31,7 +31,7 @@ public class Movimentacao extends Conta{
     public void movimentarConta() {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Olá " + getNome() + "!");
+        System.out.println("Olá " + novaConta.getNome() + "!");
         System.out.println("Você deseja sacar ou depositar? ");
         System.out.println("1 - Sacar");
         System.out.println("2 - Depositar");
@@ -39,13 +39,13 @@ public class Movimentacao extends Conta{
 
         switch (opcao){
             case 1:
-                System.out.println("Seu saldo atual é de R$ " + getSaldo() );
+                System.out.println("Seu saldo atual é de R$ " + novaConta.getSaldo() );
                 System.out.println("Quanto você deseja sacar da sua conta?");
                 sacar = sc.nextInt();
-                if(sacar <= getSaldo()) {
-                    int novoSaldo = getSaldo() - sacar;
-                    if (novoSaldo < getSaldo()) {
-                        setSaldo(novoSaldo);
+                if(sacar <= novaConta.getSaldo()) {
+                    int novoSaldo = novaConta.getSaldo() - sacar;
+                    if (novoSaldo < novaConta.getSaldo()) {
+                        novaConta.setSaldo(novoSaldo);
                         System.out.println("Seu novo saldo é de R$ " + novoSaldo);
                     }
                 }else{
@@ -54,13 +54,13 @@ public class Movimentacao extends Conta{
                 break;
 
             case 2:
-                System.out.println("Seu saldo atual é de R$ " +getSaldo() );
+                System.out.println("Seu saldo atual é de R$ " + novaConta.getSaldo() );
                 System.out.println("Quanto você deseja depositar na sua conta?");
                 depositar = sc.nextInt();
                 if(depositar >= 0){
-                int newSaldo = getSaldo() + depositar;
+                    int newSaldo = novaConta.getSaldo() + depositar;
                     if(newSaldo >= 0) {
-                        setSaldo(newSaldo);
+                        novaConta.setSaldo(newSaldo);
                         System.out.println("Seu novo saldo é de R$ " + newSaldo);
                     }
                 }else{

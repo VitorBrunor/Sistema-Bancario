@@ -19,6 +19,10 @@ public class Investimento extends Conta {
         return jurosAoMesPoupanca;
     }
 
+    public Investimento(){
+
+    }
+
     public Investimento(String nome, String numeroConta, int saldo) {
         super(nome, numeroConta, saldo);
     }
@@ -26,7 +30,7 @@ public class Investimento extends Conta {
     Scanner sc = new Scanner(System.in);
 
     public void investir(){
-        System.out.println("Olá " + getNome() + "!");
+        System.out.println("Olá " + novaConta.getNome() + "!");
         System.out.println("Você deseja ver nossas opções de investimento?");
         System.out.println("1 - Sim");
         System.out.println("2 - Não");
@@ -55,8 +59,8 @@ public class Investimento extends Conta {
         }
     }
     public void poupanca() {
-        System.out.println("Olá, " + this.getNome());
-        System.out.println("Seu saldo atual é: " + this.getSaldo());
+        System.out.println("Olá, " + novaConta.getNome());
+        System.out.println("Seu saldo atual é: " + novaConta.getSaldo());
 
         System.out.println("Você deseja investir na Poupança? ");
         System.out.println("1 - Sim");
@@ -70,10 +74,10 @@ public class Investimento extends Conta {
                 int investir = sc.nextInt();
 
                 // Atualiza o saldo após o investimento
-                this.setSaldo(this.getSaldo() - investir);
-                System.out.println("Seu saldo após o valor investido é de: " + this.getSaldo());
+                novaConta.setSaldo(novaConta.getSaldo() - investir);
+                System.out.println("Seu saldo após o valor investido é de: " + novaConta.getSaldo());
 
-                if (investir <= this.getSaldo()) {
+                if (investir <= novaConta.getSaldo()) {
                     System.out.println("Por quantos meses você deseja investir?");
                     this.setMeses(sc.nextInt());
 
@@ -81,9 +85,9 @@ public class Investimento extends Conta {
                     double totalInvestimento = investir * getJurosAoMes() * this.getMeses();
 
                     // pega o saldo(subtraido do valor investido), soma com o valor investido e soma isso com o lucro da aplicação
-                    this.setSaldo((int) (this.getSaldo() + investir + totalInvestimento));
+                    novaConta.setSaldo((int) (novaConta.getSaldo() + investir + totalInvestimento));
 
-                    System.out.println("Seu saldo após o investimento é de " + this.getSaldo());
+                    System.out.println("Seu saldo após o investimento é de " + novaConta.getSaldo());
                 } else {
                     System.out.println("Você não pode investir mais do que você tem na conta!");
                 }
@@ -100,7 +104,7 @@ public class Investimento extends Conta {
     }
 
     public void CDB() {
-        System.out.println("olá " + getNome() + "!");
+        System.out.println("olá " + novaConta.getNome() + "!");
         System.out.println("Você deseja investir no CDB? Tem o rendimento de 100% de CDI (13,65% ao mês)");
         System.out.println("1 - Sim");
         System.out.println("2 - Não");
@@ -108,25 +112,26 @@ public class Investimento extends Conta {
 
         switch(escolha){
             case 1:
-                System.out.println("Saldo atual: " + getSaldo());
+                System.out.println("Saldo atual: " + novaConta.getSaldo());
                 System.out.println("Quanto você deseja investir? ");
                 int valor = sc.nextInt();
-                if(valor <= getSaldo()){
+                if(valor <= novaConta.getSaldo()){
                     valor = valor;
                 }else{
                     System.out.println("Não é possível você investir um valor maior do que o seu saldo bancário ");
                 }
-                int novoSaldo = getSaldo() - valor;
+                int novoSaldo = novaConta.getSaldo() - valor;
                 System.out.println("Por quantos meses você deseja investir? ");
                 int meses = sc.nextInt();
 
-                double rendimento = valor * CDI * meses;
+                double rendimento = valor * getCDI() * meses;
 
-                double saldoTotal = getSaldo() + rendimento;
+                double saldoTotal = novaConta.getSaldo() + rendimento;
 
-                System.out.println("Saldo antes de investimento: R$" + (getSaldo() - valor));
+                System.out.println("Saldo antes de investimento: R$" + (novaConta.getSaldo() - valor));
                 System.out.println("Rendimento: R$" + rendimento);
                 System.out.println("Saldo total após o periodo investido: R$" + saldoTotal);
+                novaConta.setSaldo((int) saldoTotal);
                 break;
 
             case 2:
