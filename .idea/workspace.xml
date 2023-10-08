@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ffef513-377b-4ee3-971f-a70cb5541f7a" name="Changes" comment="Conta bancaria com poupança funcionando">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sistema Bancario.iml" afterDir="false" />
+    <list default="true" id="2ffef513-377b-4ee3-971f-a70cb5541f7a" name="Changes" comment="Extrato funcionando">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Conta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Conta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Investimento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Investimento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movimentacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movimentacao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/inicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inicio.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -126,7 +122,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696797910997</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Extrato funcionando">
+      <option name="closed" value="true" />
+      <created>1696798973910</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1696798973910</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -143,9 +147,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Classe investimento com Poupança e CDB funcionando" />
     <MESSAGE value="Interface funcionando (requer modificações)" />
-    <MESSAGE value="Conta bancaria com poupança funcionando" />
     <MESSAGE value="valores monetários sendo alterados globalmente" />
-    <option name="LAST_COMMIT_MESSAGE" value="valores monetários sendo alterados globalmente" />
+    <MESSAGE value="Conta bancaria com poupança funcionando" />
+    <MESSAGE value="Extrato funcionando" />
+    <option name="LAST_COMMIT_MESSAGE" value="Extrato funcionando" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

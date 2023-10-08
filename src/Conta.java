@@ -1,6 +1,5 @@
-import java.util.Scanner;
 public class Conta {
-    private String nome = "Vitor";
+    private String nome;
     private String numeroConta;
     private int saldo;
 
@@ -31,8 +30,6 @@ public class Conta {
     public void setSaldo(int saldo) {
         this.saldo = saldo;
     }
-
-    Scanner sc = new Scanner(System.in);
 
     public Conta(String nome, String numeroConta, int saldo){
         this.nome = nome;
