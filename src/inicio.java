@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class inicio extends Conta {
+public class inicio extends Cliente {
     public inicio() {
         acoes();
     }
@@ -23,7 +23,7 @@ public class inicio extends Conta {
                 break;
 
             case 2:
-                novaConta.movimentarConta();
+                novaCliente.movimentarConta();
 
                 System.out.println("---------- Deseja retornar ao menu inicio? ----------");
                 System.out.println("|   1 - Sim        |");
@@ -38,7 +38,7 @@ public class inicio extends Conta {
                 break;
 
             case 3:
-                novaConta.investimento();
+                novaCliente.investimento();
 
                 System.out.println("---------- Deseja retornar ao menu inicio? ----------");
                 System.out.println("|   1 - Sim         |");
@@ -55,9 +55,9 @@ public class inicio extends Conta {
     }
 
     public void extrato(){
-        System.out.println("---------- Nome: " + novaConta.getNome() + " ----------");
-        System.out.println("---- Número da conta: " + novaConta.getNumeroConta() + " ----");
-        System.out.println("------------ Saldo: " + novaConta.getSaldo() + " -----------");
+        System.out.println("---------- Nome: " + novaCliente.getNome() + " ----------");
+        System.out.println("---- Número da conta: " + novaCliente.getNumeroConta() + " ----");
+        System.out.println("------------ Saldo: " + novaCliente.getSaldo() + " -----------");
 
         System.out.println("*** Deseja retornar ao inicio? **");
         System.out.println("|   1 - Sim        |");

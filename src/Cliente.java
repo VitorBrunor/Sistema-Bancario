@@ -1,9 +1,9 @@
-public class Conta {
+public class Cliente {
     private String nome;
     private String numeroConta;
     private int saldo;
 
-    public Conta() {
+    public Cliente() {
 
     }
 
@@ -31,7 +31,7 @@ public class Conta {
         this.saldo = saldo;
     }
 
-    public Conta(String nome, String numeroConta, int saldo){
+    public Cliente(String nome, String numeroConta, int saldo){
         this.nome = nome;
         this.numeroConta = numeroConta;
         this.saldo = saldo;
@@ -47,5 +47,5 @@ public class Conta {
         movimentar.movimentarConta();
     }
 
-    static Conta novaConta = new Conta("Vitor", "110202", 0);
+    static Cliente novaCliente = new Cliente("Vitor", "110202", 0);
 }

@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Movimentacao extends Conta{
+public class Movimentacao extends Cliente {
     private int sacar;
     private int depositar;
 
@@ -38,13 +38,13 @@ public class Movimentacao extends Conta{
 
         switch (opcao){
             case 1:
-                System.out.println("---------- Seu saldo atual é de R$ " + novaConta.getSaldo() + " ----------");
+                System.out.println("---------- Seu saldo atual é de R$ " + novaCliente.getSaldo() + " ----------");
                 System.out.println("---- Quanto você deseja sacar da sua conta? ------");
                 sacar = sc.nextInt();
-                if(sacar <= novaConta.getSaldo()) {
-                    int novoSaldo = novaConta.getSaldo() - sacar;
-                    if (novoSaldo < novaConta.getSaldo()) {
-                        novaConta.setSaldo(novoSaldo);
+                if(sacar <= novaCliente.getSaldo()) {
+                    int novoSaldo = novaCliente.getSaldo() - sacar;
+                    if (novoSaldo < novaCliente.getSaldo()) {
+                        novaCliente.setSaldo(novoSaldo);
                         System.out.println("---------- Seu novo saldo é de R$ " + novoSaldo + " ----------");
                     }
                 }else{
@@ -53,13 +53,13 @@ public class Movimentacao extends Conta{
                 break;
 
             case 2:
-                System.out.println("----- Seu saldo atual é de R$ " + novaConta.getSaldo() + " -----");
+                System.out.println("----- Seu saldo atual é de R$ " + novaCliente.getSaldo() + " -----");
                 System.out.println("----- Quanto você deseja depositar na sua conta? -----");
                 depositar = sc.nextInt();
                 if(depositar >= 0){
-                    int newSaldo = novaConta.getSaldo() + depositar;
+                    int newSaldo = novaCliente.getSaldo() + depositar;
                     if(newSaldo >= 0) {
-                        novaConta.setSaldo(newSaldo);
+                        novaCliente.setSaldo(newSaldo);
                         System.out.println("----- Seu novo saldo é de R$ " + newSaldo + " -----");
                     }
                 }else{
