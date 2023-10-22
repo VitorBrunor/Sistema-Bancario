@@ -58,8 +58,9 @@ public class inicio extends Cliente {
         System.out.println("---------- Nome: " + novaCliente.getNome() + " ----------");
         System.out.println("---- Número da conta: " + novaCliente.getNumeroConta() + " ----");
         System.out.println("------------ Saldo: " + novaCliente.getSaldo() + " -----------");
+        System.out.println("--- Cartão: " + Cartao.gerarCartao() + " ----");
 
-        System.out.println("*** Deseja retornar ao inicio? **");
+        System.out.println("\n*** Deseja retornar ao inicio? **");
         System.out.println("|   1 - Sim        |");
         System.out.println("|   2 - Não        |");
         int escolha = sc.nextInt();

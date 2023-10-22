@@ -14,14 +14,11 @@ public class Cartao {
     }
 
     static Cartao cartao = new Cartao();
-    public static void gerarCartao() {
+    public static long gerarCartao() {
         Random gerador = new Random();
         long numeroAleatorio = 1_000_000_000_000_000L + gerador.nextLong(9_000_000_000_000_000L);
         cartao.setNumeroCartao(numeroAleatorio);
-        System.out.println("Número do cartão: " + cartao.getNumeroCartao());
-    }
-
-    public static void main(String[] args) {
-        gerarCartao();
+        long numCartao = cartao.getNumeroCartao();
+        return numCartao;
     }
 }
